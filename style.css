@@ -1,0 +1,218 @@
+:root {
+	--cta_bg_color: #1e64f0;
+	--cta_font_color: #fff;
+	--border-radius: 8px;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+}
+
+body * {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Responsivity Classes */
+
+.desktop {
+	display: block;
+}
+
+.mobile {
+	display: none;
+}
+
+/* Responsivity Classes */
+
+.header {
+	background-color: #0c0c0c;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo img {
+	max-width: 100px;
+}
+
+.header__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.header__button,
+.header__link {
+	background-color: var(--cta_bg_color);
+	color: var(--cta_font_color);
+	border-radius: var(--border-radius);
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.header__link {
+	background-color: var(--cta_font_color);
+	color: #000;
+	text-decoration: none;
+}
+
+.main {
+	min-height: 617px;
+	position: relative;
+	background-image: url("assets/hero_flavia_marinho_imersao_desktop.webp");
+	background-size: cover;
+	background-position: top center;
+}
+
+.main img {
+	max-width: 100%;
+	display: block;
+}
+
+.main__texts {
+	width: 40%;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	color: var(--cta_font_color);
+	padding: 20px;
+	backdrop-filter: blur(20px);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--cta_font_color);
+	background-color: rgba(12, 12, 12, 0.6);
+}
+
+.main__button {
+	background-color: var(--cta_bg_color);
+	color: var(--cta_font_color);
+	border-radius: var(--border-radius);
+	border: none;
+	padding: 20px;
+	cursor: pointer;
+	font-size: 22px;
+}
+
+.agent {
+	position: fixed;
+	right: 20px;
+	bottom: 100px;
+	width: 50%;
+	height: 75%;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: 250ms ease-in-out;
+}
+
+.agent.hidden {
+	width: 0;
+	height: 0;
+	transition: 250ms ease-in-out;
+}
+
+/* IFrame Styles */
+.iframe-ngdg6z,
+.MuiAvatar-root {
+	display: none !important;
+}
+/* IFrame Styles */
+
+.floating-btn {
+	position: fixed;
+	cursor: pointer;
+	right: 20px;
+	bottom: 20px;
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	background: var(--cta_bg_color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.floating-btn svg {
+	width: 50%;
+	height: 50%;
+}
+
+.footer {
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	background-color: #0c0c0c;
+	color: var(--cta_font_color);
+}
+
+.footer__text {
+	margin: 0;
+}
+
+.footer__text a {
+	color: var(--cta_font_color);
+}
+
+@media (max-width: 1019px) {
+	.agent {
+		width: 75%;
+	}
+}
+
+@media (max-width: 800px) {
+	/* Responsivity Classes */
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	/* Responsivity Classes */
+
+	.main {
+		background-image: url("assets/hero_imersao_flavia_marinho_mobile.webp");
+	}
+	
+	.main__texts {
+		width: 70%;
+		top: 75%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.main__button {
+		width: 100%;
+	}
+
+	.agent {
+		width: calc(100% - 40px);
+	}
+
+	.footer__text {
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+
+@media (max-width: 479px) {
+	.header__buttons {
+		gap: 10px;
+	}
+
+	.header__button, 
+	.header__link {
+		font-size: 12px;
+	}
+}
